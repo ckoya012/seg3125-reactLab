@@ -6,7 +6,10 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
+
+
 const RecipePage = (props) => {
+
     return(
         <div>
             { props.recipe ? (
@@ -27,7 +30,7 @@ const RecipePage = (props) => {
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <Button size="small" color="primary" href="{props.recipe.fields.url}" target="_blank">
+                        <Button size="small" color="primary" target="_blank">
                             Go to Recipe
                         </Button>
                     </CardActions>

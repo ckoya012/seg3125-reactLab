@@ -6,8 +6,9 @@ import RecipeList from './components/RecipeList';
 import Register from './components/Register';
 import './App.css';
 
-class App extends Component {
-  render() {
+
+function App() {
+
     return (
       <BrowserRouter>
         <div className="App">
@@ -19,7 +20,7 @@ class App extends Component {
       </BrowserRouter>
 
     );
-  }
+
 }
 
 export default App;
