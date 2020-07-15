@@ -5,7 +5,6 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import svg from '../img/allstar.png'
 
-
 const NavButton = withStyles({
     root: {
       textTransform: 'none',
@@ -53,6 +52,9 @@ const NavBar = () => {
                     </NavButton>
                     <NavButton className="navText" href="/recipes">
                         Recipes
+                    </NavButton>
+                    <NavButton className="navText" href="/contactUs">
+                        Contact Us
                     </NavButton>
                 </Toolbar>
             </AppBar>

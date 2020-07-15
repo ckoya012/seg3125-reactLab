@@ -1,6 +1,7 @@
 import React from 'react';
 import picture from '../img/cooking.jpg';
 import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography'
 
 const Homepage = () => {
     return (
@@ -8,7 +9,7 @@ const Homepage = () => {
         <div className="homepageImg">
             <img src={picture} alt="Food"/>
             <div className="imgText centered">
-                <h1 className="homepageTitle">AllStar Cooking</h1>
+                <Typography variant="h2" className="homepageTitle">AllStar Cooking</Typography>
                 <div className="homeBtns">
                     <Button className="homepageBtn" size="medium" color="primary" href="/register" target="_blank">
                         Register for classes
@@ -18,13 +19,7 @@ const Homepage = () => {
                     </Button>
                 </div>
             </div>
-
-
-
         </div>
-
-
-    
         </div>
     )
 }

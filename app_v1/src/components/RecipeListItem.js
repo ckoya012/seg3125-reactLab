@@ -13,13 +13,18 @@ function RecipeListItem(props) {
           pathname: `/recipes/${props.recipe.fields.slug}`,
           state: { recipe: props.recipe }
         });
-      }
+    }
+
+    const registerOnClick = e => {
+        props.history.push({
+          pathname: `/register/${props.recipe.fields.slug}`,
+          state: { recipe: props.recipe }
+        });
+    }
     
     return(
         <div>
-
             { props.recipe ? (
-
                 <Card>
                     <CardMedia style={{height: 0, paddingTop: '56.25%'}}
                     image={props.recipe.fields.image.fields.file.url}
@@ -42,7 +47,7 @@ function RecipeListItem(props) {
                             Go to Recipe
                         </Button>
 
-                        <Button size="small" color="primary" target="_blank">
+                        <Button size="small" color="primary" onClick={registerOnClick} target="_blank">
                             Register for Class
                         </Button>
                     </CardActions>
