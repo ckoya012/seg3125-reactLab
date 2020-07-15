@@ -5,9 +5,11 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { useTranslation } from 'react-i18next';
 
 function RecipeListItem(props) {
-    
+    const { t } = useTranslation();
+
     const handleOnClick = e => {
         props.history.push({
           pathname: `/recipes/${props.recipe.fields.slug}`,
@@ -31,24 +33,24 @@ function RecipeListItem(props) {
                     title={props.recipe.fields.title}/>
                     <CardContent>
                         <Typography gutterBottom variant="h4" component="h4">
-                            {props.recipe.fields.title}
+                        {t(props.recipe.fields.title)}
                         </Typography>
                         <Typography component="p">
-                            <b>Instructor: </b> {props.recipe.fields.chef}
+                            <b>{t('Instructor')}:</b> {props.recipe.fields.chef}
                         </Typography>
                         <br/>
                         <Typography component="p">
-                            {props.recipe.fields.description}
+                            {t(props.recipe.fields.description)}
                         </Typography>
                     </CardContent>
                     <CardActions style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
 
                         <Button size="small" color="primary" onClick={handleOnClick} target="_blank">
-                            Go to Recipe
+                            {t('Go to Recipe')}
                         </Button>
 
                         <Button size="small" color="primary" onClick={registerOnClick} target="_blank">
-                            Register for Class
+                            {t('Register for Class')}
                         </Button>
                     </CardActions>
                 </Card>

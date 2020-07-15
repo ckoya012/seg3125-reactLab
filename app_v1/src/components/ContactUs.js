@@ -8,6 +8,7 @@ import ContactSupport from '@material-ui/icons/ContactSupport';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import { useTranslation } from 'react-i18next';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -32,6 +33,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ContactUs() {
   const classes = useStyles();
+  const { t } = useTranslation();
+
 
   return (
     <Container component="main" maxWidth="xs">
@@ -41,7 +44,7 @@ export default function ContactUs() {
           <ContactSupport />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Contact Us
+          {t('Contact Us')}
         </Typography>
         <form className={classes.form} noValidate>
           <Grid container spacing={2}>
@@ -53,7 +56,7 @@ export default function ContactUs() {
                 required
                 fullWidth
                 id="firstName"
-                label="First Name"
+                label={t('First Name')}
                 autoFocus
               />
             </Grid>
@@ -63,7 +66,7 @@ export default function ContactUs() {
                 required
                 fullWidth
                 id="lastName"
-                label="Last Name"
+                label={t('Last Name')}
                 name="lastName"
                 autoComplete="lname"
               />
@@ -74,7 +77,7 @@ export default function ContactUs() {
                 required
                 fullWidth
                 id="email"
-                label="Email Address"
+                label={t('Email Address')}
                 name="email"
                 autoComplete="email"
               />
@@ -87,7 +90,7 @@ export default function ContactUs() {
                 rows={7}
                 fullWidth
                 name="inquiry"
-                label="Comments or Questions"
+                label={t('Comments or Questions')}
                 type="text"
                 id="inquiry"
               />
@@ -100,7 +103,7 @@ export default function ContactUs() {
             color="primary"
             className={classes.submit}
           >
-            Send
+            {t('Submit')}
           </Button>
         </form>
       </div>

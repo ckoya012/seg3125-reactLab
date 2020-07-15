@@ -79,6 +79,10 @@ video {
   width: 75%
 }
 
+.langSwitcher {
+  float: right !important;
+}
+
 /* 404 page */
 * {
   -webkit-box-sizing: border-box;

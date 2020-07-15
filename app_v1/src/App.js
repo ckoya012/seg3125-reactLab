@@ -17,7 +17,6 @@ import ContactUs from './components/ContactUs'
 
 const SPACE_ID = 'fb7egqp4t5o4';
 const ACCESS_TOKEN = 'gTzwtGt5x7av4xXQZQSYo11eWMR166TQwzMSpPE0bVc';
-
 const client = contentful.createClient({
   space: SPACE_ID,
   accessToken: ACCESS_TOKEN
@@ -60,6 +59,9 @@ class App extends Component {
           <BrowserRouter>
             <div className="App">
               <NavBar/>
+              {/* <LangTest/> */}
+              {/* <LanguageSwitcher/> */}
+
               <Switch>
                   <Route path="/" exact component={Homepage}/>
                   <Route path="/about" component={About}/>
@@ -70,6 +72,7 @@ class App extends Component {
                   {registerRoutes}
                   <Route component={PageNotFound} />
               </Switch>
+
             </div>
           </BrowserRouter>
           <Footer/>

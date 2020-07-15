@@ -4,6 +4,8 @@ import { withStyles } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import svg from '../img/allstar.png'
+import LanguageSwitcher from './LanguageSwitcher'
+
 
 const NavButton = withStyles({
     root: {
@@ -56,6 +58,7 @@ const NavBar = () => {
                     <NavButton className="navText" href="/contactUs">
                         Contact Us
                     </NavButton>
+                  <LanguageSwitcher/>
                 </Toolbar>
             </AppBar>
         </div>

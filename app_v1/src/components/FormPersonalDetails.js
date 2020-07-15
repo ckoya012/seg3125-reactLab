@@ -46,7 +46,7 @@ export class FormPersonalDetails extends Component {
 
       <MuiThemeProvider>
         <>
-            <AppBar title="Enter Personal Details" />
+            <AppBar title="Enter Personal Details" />         
             <Tooltip title="You must go back to the Register page to select a different cooking class." aria-label="class">
             <TextField
               label="Class"
