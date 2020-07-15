@@ -11,7 +11,7 @@ const About = () => {
                 <img src={aboutUs} width="100%" alt="AllStar Cooking"/>
             </div>
             <div className="carousel-caption">
-                <div class="caption-wrap">
+                <div className="caption-wrap">
                     <h1>About Us</h1>
                     {/* <p>We strive to provide our students with the highest quality culinary education.</p> */}
                     <p>AllStar Cooking has been setting the standard for excellence in culinary education since July 2020. With campuses all over the world, we offer cooking classes for students of all ages.</p>
@@ -52,7 +52,7 @@ const About = () => {
                         </div>
                     </div>
                 </section>
-                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossOrigin="anonymous"/>
                 <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
             </div>
         </div>

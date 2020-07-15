@@ -51,7 +51,7 @@ const NavBar = () => {
                     <NavButton className="navText" href="/register">
                         Register
                     </NavButton>
-                    <NavButton className="navText" href="/recipeList">
+                    <NavButton className="navText" href="/recipes">
                         Recipes
                     </NavButton>
                 </Toolbar>

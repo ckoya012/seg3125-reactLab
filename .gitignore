@@ -13,3 +13,4 @@ my-app/src/index.css
 my-app/src/index.js
 my-app/src/ninjas.js
 my-app/src/serviceWorker.js
+app/node_modules

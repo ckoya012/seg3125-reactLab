@@ -3,12 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import RecipeList from './components/RecipeList';
 import './App.css';
-import {Router, Route} from 'react-router';
-import SingleRecipe from './components/SingleRecipe';
-import {createBrowserHistory} from 'history';
-const browserHistory = createBrowserHistory();
+
 
 ReactDOM.render(
   <React.StrictMode>

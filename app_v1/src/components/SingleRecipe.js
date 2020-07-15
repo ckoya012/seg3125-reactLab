@@ -1,39 +1,51 @@
 import React, {Component} from 'react';
-import * as contentful from 'contentful';
-const SPACE_ID = 'fb7egqp4t5o4';
-const ACCESS_TOKEN = 'gTzwtGt5x7av4xXQZQSYo11eWMR166TQwzMSpPE0bVc';
+import Divider from '@material-ui/core/Divider'
 
-const client = contentful.createClient({
-    space: SPACE_ID,
-    accessToken: ACCESS_TOKEN
-});
 class SingleRecipe extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {recipe: null}
     }
 
-    componentDidMount() {
-        const {params} = this.props;
-        if (params.slug) {
-            client.getEntries({
-                content_type: 'recipe',
-                'fields.slug': params.slug
-            }).then((response) => {
-                this.setState({recipe: response.items[0]})
-            })
+    generateWrittenInstr(recipe) {
+        var instructions = []
+        for (var i = 0; i < recipe.instructions.content[0].content.length; i++) {
+            instructions.push(<li>{recipe.instructions.content[0].content[i].content[0].content[0].value}</li>)
         }
+        return instructions;
+    }
+
+    generateIngredients(recipe) {
+        var ingredients = []
+        for (var i = 0; i < recipe.ingredients.content[0].content.length; i++) {
+            ingredients.push(<li>{recipe.ingredients.content[0].content[i].content[0].content[0].value}</li>)
+        }
+        return ingredients;
     }
 
     render() {
-        if (!this.state.recipe) {
-            return <h1>Not found</h1>
-        }
+        const recipe = this.props.history.location.state.recipe.fields
+        console.log(recipe)
 
         return (
             <div>
-                <h1>{this.state.article.fields.title}</h1>
-                <div>{this.state.article.fields.video}</div>
+                <h1>{recipe.title}</h1>
+                <h3>Video Instructions</h3>
+                <video id="background-video" loop controls autoPlay>
+                    <source src={recipe.video.fields.file.url} type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+                <Divider/>
+                <div className="ingredients">
+                    <h3>Ingredients</h3>
+                    <ol>{recipe.ingredients}</ol>
+                    {/* <ol>{this.generateIngredients(recipe)}</ol> */}
+                </div>
+                <Divider/>
+                <div className="writtenInstr">
+                    <h3>Written Instructions</h3>
+                    <ol>{this.generateWrittenInstr(recipe)}</ol>
+                </div>
             </div>
         )
     }

@@ -13,3 +13,56 @@
 .navText {
   color: white !important;
 }
+
+a {
+  text-decoration: none;
+}
+
+video {
+  margin-bottom: 30px;
+}
+
+.writtenInstr, .ingredients {
+  text-align: left;
+  margin: 50px;
+  line-height: 1.5;
+}
+
+/* Container holding the image and the text */
+.homepageImg {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.homepageImg img {
+  /* opacity: 0.7; */
+  width: 100%;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.homepageBtn {
+  background-color: #3f51b5 !important;
+  color: white !important;
+  margin: 10px !important;
+  padding: 12px !important;
+}
+
+.homepageBtn:hover {
+  background-color: #324090 !important;
+}
+
+.homepageTitle {
+  font-size: 3em;
+}
+
+.homeBtns {
+  text-align: center;
+}

@@ -6,9 +6,6 @@ import RecipeListItem from '../components/RecipeListItem';
 import Search from '@material-ui/icons/Search';
 import InputAdornment from '@material-ui/core/InputAdornment';
 
-import { BrowserRouter, Route, Switch, Router } from 'react-router-dom'
-
-import SingleRecipe from './SingleRecipe';
 const SPACE_ID = 'fb7egqp4t5o4';
 const ACCESS_TOKEN = 'gTzwtGt5x7av4xXQZQSYo11eWMR166TQwzMSpPE0bVc';
 
@@ -23,8 +20,8 @@ class RecipeList extends Component {
         searchString: ''
     }
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.getRecipes();
     }
 
@@ -52,6 +49,8 @@ class RecipeList extends Component {
     }
 
     render() {
+        // console.log(this.props)
+        // console.log(this.state)
         return (
             <div>
                 {this.state.recipes ? (
@@ -73,7 +72,7 @@ class RecipeList extends Component {
                         <Grid container spacing={5} style={{padding: 24}}>
                             {this.state.recipes.map(currentRecipe => (
                                 <Grid item xs={12} sm={4} lg={4} xl={3}>
-                                    <RecipeListItem recipe={currentRecipe} />
+                                    <RecipeListItem {...this.props} recipe={currentRecipe} />
                                 </Grid>
                             ))}
                         </Grid>

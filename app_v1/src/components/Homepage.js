@@ -1,10 +1,30 @@
 import React from 'react';
+import picture from '../img/cooking.jpg';
+import Button from '@material-ui/core/Button';
 
 const Homepage = () => {
     return (
         <div>
-        <p>Testing</p>
-            
+        <div className="homepageImg">
+            <img src={picture} alt="Food"/>
+            <div className="imgText centered">
+                <h1 className="homepageTitle">AllStar Cooking</h1>
+                <div className="homeBtns">
+                    <Button className="homepageBtn" size="medium" color="primary" href="/register" target="_blank">
+                        Register for classes
+                    </Button>
+                    <Button className="homepageBtn" size="medium" color="primary" href="/recipes" target="_blank">
+                        View available recipes
+                    </Button>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+    
         </div>
     )
 }
