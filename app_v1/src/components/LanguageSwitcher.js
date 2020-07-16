@@ -41,18 +41,12 @@ const StyledMenuItem = withStyles((theme) => ({
 export default function LanguageSwitcher() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const { t, i18n } = useTranslation();
-
-  // i18n.init({
-  //   keySeparator: false
-  // });
   
   function switchLang(lang) {
     i18n.changeLanguage(lang);
-
   }
 
   const handleClick = (event) => {
-    console.log(event)
     setAnchorEl(event.currentTarget);
   };
 

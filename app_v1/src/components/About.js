@@ -13,7 +13,6 @@ const About = () => {
             <div className="carousel-caption">
                 <div className="caption-wrap">
                     <h1>About Us</h1>
-                    {/* <p>We strive to provide our students with the highest quality culinary education.</p> */}
                     <p>AllStar Cooking has been setting the standard for excellence in culinary education since July 2020. With campuses all over the world, we offer cooking classes for students of all ages.</p>
                     <p>Our primary goal is to provide the world's best professional culinary education and enable our students to succeed and excel in the culinary arts.</p>
                 </div>

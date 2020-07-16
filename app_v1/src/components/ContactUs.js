@@ -35,7 +35,6 @@ export default function ContactUs() {
   const classes = useStyles();
   const { t } = useTranslation();
 
-
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />

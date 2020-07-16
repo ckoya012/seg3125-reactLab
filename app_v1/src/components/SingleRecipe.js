@@ -25,7 +25,6 @@ class SingleRecipe extends Component {
 
     render() {
         const recipe = this.props.history.location.state.recipe.fields
-        console.log(recipe)
 
         return (
             <div>
